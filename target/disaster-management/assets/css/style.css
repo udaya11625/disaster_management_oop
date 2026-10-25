@@ -1,0 +1,345 @@
+/* ========================================================
+   DISASTER MANAGEMENT PLATFORM - MODERN UI/UX STYLESHEET
+   Emergency Theme: Dark Navy, Clean Slate White, Vivid Crimson
+   ======================================================== */
+
+:root {
+    --primary-navy: #0B1B3D;
+    --navy-light: #162C5B;
+    --navy-dark: #071126;
+    --emergency-red: #D32F2F;
+    --emergency-red-hover: #B71C1C;
+    --emergency-orange: #F57C00;
+    --warning-amber: #FFA000;
+    --success-green: #2E7D32;
+    --info-blue: #0288D1;
+    --slate-bg: #F8FAFC;
+    --slate-card: #FFFFFF;
+    --slate-border: #E2E8F0;
+    --text-main: #1E293B;
+    --text-muted: #64748B;
+    --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--slate-bg);
+    color: var(--text-main);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    line-height: 1.6;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+footer {
+    flex-shrink: 0;
+}
+
+/* ========================================================
+   NAVBAR & HEADER
+   ======================================================== */
+.navbar-emergency {
+    background-color: var(--primary-navy) !important;
+    border-bottom: 3px solid var(--emergency-red);
+    box-shadow: 0 4px 12px rgba(11, 27, 61, 0.15);
+    padding: 0.75rem 1rem;
+}
+
+.navbar-brand-logo {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    font-size: 1.25rem;
+    color: #FFFFFF !important;
+}
+
+.brand-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    background-color: var(--emergency-red);
+    color: #FFFFFF;
+    border-radius: 8px;
+    margin-right: 10px;
+    font-size: 1.2rem;
+    box-shadow: 0 2px 6px rgba(211, 47, 47, 0.4);
+}
+
+.nav-link {
+    font-weight: 500;
+    color: #E2E8F0 !important;
+    padding: 0.5rem 0.9rem !important;
+    border-radius: 6px;
+    transition: all 0.2s ease-in-out;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: #FFFFFF !important;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.btn-emergency-nav {
+    background-color: var(--emergency-red);
+    color: #FFFFFF !important;
+    font-weight: 600;
+    padding: 0.45rem 1rem;
+    border-radius: 6px;
+    border: none;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 8px rgba(211, 47, 47, 0.35);
+}
+
+.btn-emergency-nav:hover {
+    background-color: var(--emergency-red-hover);
+    transform: translateY(-1px);
+}
+
+/* ========================================================
+   EMERGENCY BANNER & DISCLAIMER
+   ======================================================== */
+.academic-disclaimer-strip {
+    background: #FFF3CD;
+    border-bottom: 1px solid #FFE69C;
+    color: #664D03;
+    font-size: 0.825rem;
+    padding: 0.4rem 1rem;
+    text-align: center;
+    font-weight: 500;
+}
+
+.emergency-alert-bar {
+    background: linear-gradient(90deg, #D32F2F 0%, #B71C1C 100%);
+    color: #FFFFFF;
+    padding: 0.6rem 1rem;
+    font-weight: 500;
+}
+
+/* ========================================================
+   HERO SECTION
+   ======================================================== */
+.hero-wrapper {
+    background: linear-gradient(135deg, var(--navy-dark) 0%, var(--primary-navy) 60%, var(--navy-light) 100%);
+    color: #FFFFFF;
+    padding: 4.5rem 0 4rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: radial-gradient(circle at 80% 20%, rgba(211, 47, 47, 0.15) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.hero-title {
+    font-size: 2.75rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 1.25rem;
+    letter-spacing: -1px;
+}
+
+.hero-lead {
+    font-size: 1.15rem;
+    color: #CBD5E1;
+    margin-bottom: 2rem;
+    max-width: 620px;
+}
+
+/* ========================================================
+   STAT CARDS & DASHBOARD WIDGETS
+   ======================================================== */
+.stat-card {
+    background: #FFFFFF;
+    border-radius: 12px;
+    border: 1px solid var(--slate-border);
+    padding: 1.5rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(11, 27, 61, 0.08);
+}
+
+.stat-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.stat-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-main);
+    line-height: 1;
+    margin-bottom: 0.25rem;
+}
+
+.stat-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--text-muted);
+}
+
+.card-theme {
+    background: #FFFFFF;
+    border-radius: 12px;
+    border: 1px solid var(--slate-border);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+    margin-bottom: 1.75rem;
+    overflow: hidden;
+}
+
+.card-theme .card-header {
+    background-color: #FFFFFF;
+    border-bottom: 1px solid var(--slate-border);
+    padding: 1rem 1.5rem;
+    font-weight: 600;
+    color: var(--primary-navy);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-theme .card-body {
+    padding: 1.5rem;
+}
+
+/* ========================================================
+   BADGES & STATUS INDICATORS
+   ======================================================== */
+.status-badge {
+    padding: 0.35rem 0.75rem;
+    border-radius: 50px;
+    font-size: 0.775rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.pulse-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: currentColor;
+    display: inline-block;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(0.95); opacity: 0.7; }
+    50% { transform: scale(1.3); opacity: 1; }
+    100% { transform: scale(0.95); opacity: 0.7; }
+}
+
+/* ========================================================
+   TABLES & FORMS
+   ======================================================== */
+.table-custom {
+    margin-bottom: 0;
+}
+
+.table-custom th {
+    background-color: #F1F5F9;
+    color: var(--text-main);
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid var(--slate-border);
+    padding: 0.85rem 1rem;
+}
+
+.table-custom td {
+    padding: 0.9rem 1rem;
+    vertical-align: middle;
+    border-bottom: 1px solid var(--slate-border);
+}
+
+.form-label {
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: var(--text-main);
+    margin-bottom: 0.35rem;
+}
+
+.form-control, .form-select {
+    border-radius: 8px;
+    border: 1px solid var(--slate-border);
+    padding: 0.6rem 0.85rem;
+    font-size: 0.95rem;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--primary-navy);
+    box-shadow: 0 0 0 3px rgba(11, 27, 61, 0.12);
+}
+
+/* ========================================================
+   FOOTER
+   ======================================================== */
+.footer-main {
+    background-color: var(--primary-navy);
+    color: #CBD5E1;
+    padding: 3rem 0 1.5rem 0;
+    font-size: 0.9rem;
+    border-top: 3px solid var(--emergency-red);
+}
+
+.footer-heading {
+    color: #FFFFFF;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+    font-size: 1.05rem;
+}
+
+.footer-links {
+    list-style: none;
+    padding-left: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.6rem;
+}
+
+.footer-links a {
+    color: #94A3B8;
+    text-decoration: none;
+    transition: color 0.15s ease;
+}
+
+.footer-links a:hover {
+    color: #FFFFFF;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    font-size: 0.825rem;
+    color: #94A3B8;
+}
