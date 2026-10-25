@@ -110,3 +110,4 @@ function fillCredentials(user, pass) {
 </script>
 
 <%@ include file="/WEB-INF/views/common/footer.jsp" %>
+

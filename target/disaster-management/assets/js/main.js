@@ -59,3 +59,4 @@ function filterTable(inputId, tableId) {
         tr[i].style.display = matched ? '' : 'none';
     }
 }
+

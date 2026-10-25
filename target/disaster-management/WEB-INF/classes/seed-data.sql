@@ -111,3 +111,4 @@ VALUES (3, 'Cyclone Relief Shelters Operating at Full Readiness', 'All district 
 -- 9. Incident Assignments
 INSERT INTO incident_assignments (volunteer_id, report_id, request_id, task_title, task_description, assigned_by, status)
 VALUES (3, 1, 1, 'Riverdale Evacuation Center First-Aid & Registration', 'Assist arriving flood evacuees with preliminary medical triage and family registration.', 1, 'IN_PROGRESS');
+

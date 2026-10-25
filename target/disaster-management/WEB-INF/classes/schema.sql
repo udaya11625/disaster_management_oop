@@ -186,3 +186,4 @@ CREATE TABLE IF NOT EXISTS incident_assignments (
     FOREIGN KEY (request_id) REFERENCES assistance_requests(id) ON DELETE CASCADE,
     FOREIGN KEY (assigned_by) REFERENCES users(id) ON DELETE SET NULL
 );
+

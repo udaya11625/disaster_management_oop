@@ -122,3 +122,4 @@ document.addEventListener('DOMContentLoaded', function () {
             console.error('Could not load chart analytics:', err);
         });
 });
+
