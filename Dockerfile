@@ -3,6 +3,6 @@ WORKDIR /app
 COPY . .
 RUN mvn clean package -DskipTests
 
-FROM tomcat:9-jdk17
+FROM tomcat:10-jdk17
 RUN rm -rf /usr/local/tomcat/webapps/*
 COPY --from=build /app/target/*.war /usr/local/tomcat/webapps/ROOT.war
